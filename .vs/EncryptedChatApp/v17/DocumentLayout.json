@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|c:\\users\\andre\\source\\repos\\encryptedchatapp\\encryptedchatapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|solutionrelative:encryptedchatapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|c:\\users\\andre\\source\\repos\\encryptedchatapp\\encryptedchatapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|solutionrelative:encryptedchatapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|c:\\users\\andre\\source\\repos\\encryptedchatapp\\encryptedchatapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|solutionrelative:encryptedchatapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|c:\\users\\andre\\source\\repos\\encryptedchatapp\\encryptedchatapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4907471-EE76-466C-9EB9-03659E71FC67}|EncryptedChatApp\\EncryptedChatApp.csproj|solutionrelative:encryptedchatapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Form1.cs",
+              "RelativeDocumentMoniker": "EncryptedChatApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Form1.cs [Design]",
+              "RelativeToolTip": "EncryptedChatApp\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:57:53.429Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Form1.cs",
+              "RelativeDocumentMoniker": "EncryptedChatApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Form1.cs",
+              "RelativeToolTip": "EncryptedChatApp\\Form1.cs",
+              "ViewState": "AgIAAJ8BAAAAp6wpaxIjwBAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:59:18.312Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "EncryptedChatApp\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Form1.Designer.cs",
+              "RelativeToolTip": "EncryptedChatApp\\Form1.Designer.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T15:59:27.243Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Program.cs",
+              "RelativeDocumentMoniker": "EncryptedChatApp\\Program.cs",
+              "ToolTip": "C:\\Users\\andre\\source\\repos\\EncryptedChatApp\\EncryptedChatApp\\Program.cs",
+              "RelativeToolTip": "EncryptedChatApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T16:02:53.022Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
