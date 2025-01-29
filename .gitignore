@@ -1,3 +1,7 @@
 /EncryptedChatApp/bin/*
 /EncryptedChatApp/obj/*
 .vs
+.vs/EncryptedChatApp/v17/DocumentLayout.json
+.vs/EncryptedChatApp/v17/DocumentLayout.backup.json
+.vs/EncryptedChatApp/v17/.suo
+.vs/EncryptedChatApp/FileContentIndex/df79caf2-4d5c-4bc5-8384-c6a8ecc288cc.vsidx
