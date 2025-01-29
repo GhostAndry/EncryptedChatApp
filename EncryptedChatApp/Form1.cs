@@ -78,11 +78,31 @@ namespace EncryptedChatApp
             // Spostato nel metodo Load per evitare problemi di threading
             this.Load += ChatForm_Load;
             this.FormClosing += ChatForm_FormClosing;
+            this.messageTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MessageTextBox_KeyDown);
+
         }
 
         private void ChatForm_Load(object sender, EventArgs e)
         {
             ShowModeSelectionDialog();
+        }
+
+        private void MessageTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Se si preme Enter, invia il messaggio
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita di aggiungere una nuova riga
+                SendMessage(messageTextBox.Text);
+                messageTextBox.Clear();
+            }
+
+            // Se si preme Ctrl+Backspace, cancella l'ultima parola
+            if (e.KeyCode == Keys.Back && e.Control)
+            {
+                e.SuppressKeyPress = true;
+                RemoveLastWord();
+            }
         }
 
         private void ShowModeSelectionDialog()
@@ -107,6 +127,35 @@ namespace EncryptedChatApp
                 LoadKeysFromFile();
                 ConnectToServer(serverIp, serverPort);
             }
+
+            if (result == DialogResult.Yes)
+            {
+                string ip = PromptInput("Inserisci l'indirizzo IP del server (default: 0.0.0.0):", "0.0.0.0");
+                int port = int.Parse(PromptInput("Inserisci la porta del server (default: 9999):", "9999"));
+
+                // Chiede all'utente se vuole riutilizzare le chiavi precedenti
+                var useExistingKeys = MessageBox.Show(
+                    "Vuoi usare le stesse chiavi di crittografia dell'ultima sessione?",
+                    "Scelta delle chiavi",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (useExistingKeys == DialogResult.Yes)
+                {
+                    LoadKeysFromFile();
+                    AppendToChat("Chiavi di crittografia caricate dal file.");
+                }
+                else
+                {
+                    GenerateNewKeys();
+                    SaveKeysToFile();
+                    AppendToChat("Nuove chiavi generate e salvate.");
+                }
+
+                SetupServer(ip, port);
+            }
+
         }
 
         private string PromptInput(string message, string defaultValue)
@@ -185,6 +234,14 @@ namespace EncryptedChatApp
             {
                 MessageBox.Show($"Errore durante il salvataggio delle chiavi: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void GenerateNewKeys()
+        {
+            aesIV = GenerateRandomBytes(16);
+            aesKey = GenerateRandomBytes(32);
+            hmacKey = GenerateRandomBytes(32);
+            rsaProvider = new RSACryptoServiceProvider(2048);
         }
 
         private void LoadKeysFromFile()
@@ -433,5 +490,25 @@ namespace EncryptedChatApp
 
             return true;
         }
+
+        private void RemoveLastWord()
+        {
+            string text = messageTextBox.Text;
+            if (string.IsNullOrWhiteSpace(text))
+                return;
+
+            int pos = messageTextBox.SelectionStart; // Posizione del cursore
+            if (pos == 0)
+                return;
+
+            int lastSpaceIndex = text.LastIndexOf(' ', pos - 1);
+            if (lastSpaceIndex == -1)
+                messageTextBox.Text = ""; // Cancella tutto se c'è una sola parola
+            else
+                messageTextBox.Text = text.Substring(0, lastSpaceIndex);
+
+            messageTextBox.SelectionStart = messageTextBox.Text.Length; // Rimetti il cursore alla fine
+        }
+
     }
 }
