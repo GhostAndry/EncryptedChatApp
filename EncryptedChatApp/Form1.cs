@@ -117,25 +117,10 @@ namespace EncryptedChatApp
             {
                 string ip = PromptInput("Inserisci l'indirizzo IP del server (default: 0.0.0.0):", "0.0.0.0");
                 int port = int.Parse(PromptInput("Inserisci la porta del server (default: 9999):", "9999"));
-                SaveKeysToFile();
-                SetupServer(ip, port);
-            }
-            else
-            {
-                string serverIp = PromptInput("Inserisci l'indirizzo IP del server:", "127.0.0.1");
-                int serverPort = int.Parse(PromptInput("Inserisci la porta del server:", "9999"));
-                LoadKeysFromFile();
-                ConnectToServer(serverIp, serverPort);
-            }
-
-            if (result == DialogResult.Yes)
-            {
-                string ip = PromptInput("Inserisci l'indirizzo IP del server (default: 0.0.0.0):", "0.0.0.0");
-                int port = int.Parse(PromptInput("Inserisci la porta del server (default: 9999):", "9999"));
 
                 // Chiede all'utente se vuole riutilizzare le chiavi precedenti
                 var useExistingKeys = MessageBox.Show(
-                    "Vuoi usare le stesse chiavi di crittografia dell'ultima sessione?",
+                    "Vuoi usare le stesse chiavi di crittografia dell'ultima sessione? (UNSAFE)",
                     "Scelta delle chiavi",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
